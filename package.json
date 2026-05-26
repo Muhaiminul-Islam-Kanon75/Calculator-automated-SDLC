@@ -1,0 +1,16 @@
+{
+  "name": "calculator-app",
+  "version": "1.0.0",
+  "description": "A simple calculator application",
+  "main": "calculator.js",
+  "scripts": {
+    "test": "jest",
+    "start": "node calculator.js"
+  },
+  "keywords": ["calculator", "math"],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.0.0"
+  }
+}
