@@ -1,8 +1,12 @@
-const { add } = require('./src/calculator');
+const { add, subtract } = require('./src/calculator');
 
 describe('Calculator', () => {
   test('add: 2 + 3 should equal 5', () => {
     expect(add(2, 3)).toBe(5);
+  });
+
+  test('subtract: 5 - 2 should equal 3', () => {
+    expect(subtract(5, 2)).toBe(3);
   });
 
 });
