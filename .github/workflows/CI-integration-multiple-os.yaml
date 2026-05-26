@@ -13,7 +13,7 @@ jobs:
     runs-on: ${{ matrix.operating-system }} # variable. matrix is default. other can be modfied
     strategy: 
       matrix: 
-        operating-system: [ubuntu-latest, ubuntu-22.04, ubuntu-20.04]
+        operating-system: [ubuntu-latest, ubuntu-22.04]
         # node-version: nodejs version used on actions/setup-node@v4
 
     steps: 
