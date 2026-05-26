@@ -1,0 +1,31 @@
+# for multiple os version check 
+# Automated CI for calculator app 
+name: calculator test
+
+on:
+  push:
+    branches:
+    - main # push on main branch
+  pull_request: # whenever there is a pull request 
+
+jobs: 
+  calc-app-mos: 
+    runs-on: ${{ matrix.operating-system }} # variable. matrix is default. other can be modfied
+    strategy: 
+      matrix: 
+        operating-system: [ubuntu-latest, ubuntu-22.04]
+        # node-version: nodejs version used on actions/setup-node@v4
+
+    steps: 
+    - name: Checkout code
+      uses: actions/checkout@v4
+    - name: Checkout nodejs 
+      uses: actions/setup-node@v4 
+      with:
+        node-version: 18 # nodejs version must be mentioend
+    
+    - name: setup nodejs dependencies
+      run: npm install
+    - name: run testing 
+      run: npm test 
+      
