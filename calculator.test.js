@@ -25,4 +25,8 @@ describe('Calculator-non-number', () => {
     expect(() => add('a', 5)).toThrow('Both arguments must be numbers');
   });
 
+  test('divide: should throw error on divide by zero', () => {
+    expect(() => divide(10, 0)).toThrow('Cannot divide by zero');
+  });
+
 });
