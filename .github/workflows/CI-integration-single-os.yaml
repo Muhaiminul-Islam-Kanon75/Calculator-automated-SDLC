@@ -4,12 +4,8 @@ name: calculator test
 on:
   push:
     branches:
-    - main # push on main branch 
-    - staging
+    - main # push on main branch
   pull_request: # whenever there is a pull request 
-    branches:
-    - main 
-    - staging
 
 jobs: 
   calc-app: # job name 
@@ -18,7 +14,7 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
-    - name: Checkout Node.js
+    - name: Setup Node.js
       uses: actions/setup-node@v4
       with:
         node-version: 18 
