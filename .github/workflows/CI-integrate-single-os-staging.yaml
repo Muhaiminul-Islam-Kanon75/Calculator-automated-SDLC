@@ -1,0 +1,29 @@
+# Automated CI for calculator app 
+name: calculator test
+
+on:
+  push:
+    branches:
+    - main # push on main branch 
+    - staging
+  pull_request: # whenever there is a pull request 
+    branches:
+    - main 
+    - staging
+
+jobs: 
+  calc-app: # job name 
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    - name: Checkout Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: 18 
+    
+    - name: Install dependencies 
+      run: npm install
+    - name: run test command
+      run: npm test

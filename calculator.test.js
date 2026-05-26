@@ -1,4 +1,4 @@
-const { add, subtract, multiply } = require('./src/calculator');
+const { add, subtract, multiply, divide } = require('./src/calculator');
 
 describe('Calculator', () => {
   test('add: 2 + 3 should equal 5', () => {
@@ -11,6 +11,10 @@ describe('Calculator', () => {
   
   test('multiply: 4 * 5 should equal 20', () => {
     expect(multiply(4, 5)).toBe(20);
+  });
+  
+  test('divide: 10 / 2 should equal 5', () => {
+    expect(divide(10, 2)).toBe(5);
   });
 
 });
