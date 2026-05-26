@@ -4,8 +4,12 @@ name: calculator test
 on:
   push:
     branches:
-    - main # push on main branch
+    - main # push on main branch 
+    - staging
   pull_request: # whenever there is a pull request 
+    branches:
+    - main 
+    - staging
 
 jobs: 
   calc-app: # job name 
