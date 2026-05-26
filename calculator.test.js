@@ -1,4 +1,4 @@
-const { add, subtract, multiply, divide } = require('./src/calculator');
+const { add, subtract, multiply, divide, remainder } = require('./src/calculator');
 
 describe('Calculator', () => {
   test('add: 2 + 3 should equal 5', () => {
@@ -16,7 +16,10 @@ describe('Calculator', () => {
   test('divide: 10 / 2 should equal 5', () => {
     expect(divide(10, 2)).toBe(5);
   });
-
+  
+  test('remainder: 10 % 3 should equal 1', () => {
+    expect(remainder(10, 3)).toBe(1);
+  });
 });
 
 describe('Calculator-non-number', () => {
